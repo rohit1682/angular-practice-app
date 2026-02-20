@@ -1,0 +1,14 @@
+
+<section>
+    
+    <div class="counter-page-container">
+        <h1>Counter Page</h1>
+        <div class="counter-container">
+            <button (click)="decrement()">-</button>
+            <h2>{{count()}}</h2>
+            <button (click)="increment()">+</button>
+
+            <input type="number" [value]="count()" (input)="anyChange($event)">
+        </div>
+    </div>
+</section>
