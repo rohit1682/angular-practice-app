@@ -1,11 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Todos } from './pages/todos/todos';
+import { TodosComponent } from './pages/todos-component/todos-component';
 import { Counter } from './pages/counter/counter';
 
 @Component({
   selector: 'app-root',
-  imports: [Counter],
+  imports: [Counter, TodosComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

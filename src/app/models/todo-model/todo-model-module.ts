@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export interface Todo{
-  id: number;
+  id: Date;
   title: string;
   completed: boolean;
 }

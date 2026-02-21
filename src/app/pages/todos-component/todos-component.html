@@ -1,0 +1,51 @@
+<section>
+    <h1>Todo App</h1>
+
+    <div>
+        <input 
+            type="text"
+            placeholder="Enter new Todo Title..."
+            [(ngModel)]="newTodoTitle"
+            (keyup.enter)="addTodo()"
+        />
+        <button type="button" (click)="addTodo()">
+            Create New Todo
+        </button>
+    </div>
+
+    @if(todoList.length) {
+        <div>
+            <h2>Todo List</h2>
+            <ul>
+                @for(todo of todoList; track todo.id) {
+                    <li>
+                        <!-- Toggle -->
+                        <input 
+                            type="checkbox"
+                            [checked]="todo.completed"
+                            (change)="toggleTodo(todo.id)"
+                        />
+
+                        <!-- Title -->
+                        <span [class.completed]="todo.completed">
+                            {{ todo.title }}
+                        </span>
+
+                        <!-- Update -->
+                        <!-- <button (click)="updateTodos()">
+                            Edit
+                        </button> -->
+
+                        <!-- Delete -->
+                        <button (click)="deleteTodo(todo.id)">
+                            Delete
+                        </button>
+                    </li>
+                }
+            </ul>
+        </div>
+    } @else {
+        <h2>No Todos yet!</h2>
+    }
+
+</section>
