@@ -28,10 +28,10 @@ export class TodosComponent {
     this.getTodos();
   }
 
-  updateTodos(id : Date, title : string) : void {
-    this.todoService.updateTodo(id, title);
-    this.getTodos();
-  }
+  // updateTodos(id : Date, title : string) : void {
+  //   this.todoService.updateTodo(id, title);
+  //   this.getTodos();
+  // }
 
   toggleTodo(id: Date) : void {
     this.todoService.toggleTodo(id);
