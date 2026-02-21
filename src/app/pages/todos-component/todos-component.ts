@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Todos } from '../../services/todos';
 import { Todo } from '../../models/todo-model/todo-model-module';
-import { NgIf } from "../../../../node_modules/@angular/common/types/_common_module-chunk";
 import { FormsModule } from '@angular/forms';
 
 @Component({

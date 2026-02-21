@@ -46,7 +46,7 @@ export class Todos {
   }
 
   deleteTodo(id: Date) : void {
-    this.todoList = this.todoList.filter(t => t.id === id);
+    this.todoList = this.todoList.filter(t => t.id !== id);
     this.saveToLocalStorage();
   }
 
